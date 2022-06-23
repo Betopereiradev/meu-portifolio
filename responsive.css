@@ -1,0 +1,46 @@
+@media (max-width: 506px) {
+  .profile-wrapper {
+    flex-direction: column;
+  }
+  .nome-redes {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cv-contato button {
+    height: 50px;
+    width: 150px;
+  }
+
+  .container-sm {
+    margin-top: 50px;
+  }
+
+  .projetos {
+    width: 90%;
+    height: 70px;
+    text-align: center;
+
+    margin-bottom: 30px;
+  }
+
+  .projetos h2 {
+    height: 60px;
+    line-height: 70px;
+    border-radius: 10px;
+    font-size: 2rem;
+  }
+
+  .projeto {
+    width: 100%;
+  }
+}

@@ -1,2 +1,2 @@
-# meu-portifolio
-projeto de criação do meu portifólio
+# Portifólio
+Projeto de criação do meu portifólio
