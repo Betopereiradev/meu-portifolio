@@ -1,4 +1,4 @@
-@media (max-width: 506px) {
+@media (max-width: 1024px) {
   .profile-wrapper {
     flex-direction: column;
   }
@@ -25,22 +25,44 @@
     margin-top: 50px;
   }
 
-  .projetos {
-    width: 90%;
-    height: 70px;
-    text-align: center;
-
-    margin-bottom: 30px;
+  .projeto-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
-  .projetos h2 {
-    height: 60px;
-    line-height: 70px;
-    border-radius: 10px;
-    font-size: 2rem;
-  }
-
-  .projeto {
+  .projeto-img {
     width: 100%;
   }
+
+  .projeto-img img {
+   height: 50rem;
+   width: 100%;
+  }
+
+  .projeto-txt {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .projeto-estudo {
+    text-align: center;
+  }
 }
+
+@media (max-width: 425px) {
+  .projeto-img {
+    width: 85%;
+  }
+
+  .projeto-img img {
+    height: 25rem;
+    height: 100%;
+  }
+
+  .projeto-txt {
+    width: 85%;
+  }
+}
+

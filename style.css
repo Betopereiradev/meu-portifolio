@@ -1,7 +1,8 @@
 :root {
   --cor-preto: #0c151d;
   --cor-cinza: #171f26;
-  --cor-cinza-texto: #A3ABB2;
+  --cor-cinza-texto: #a3abb2;
+  --cor-azul: #055fef;
 
   font-size: 62.5% !important;
 }
@@ -16,6 +17,8 @@ body {
 .container-sm {
   margin-top: 50px;
 }
+
+/*=========================================================== PARTE PERFIL ====================================================================*/
 
 header {
   display: flex;
@@ -35,7 +38,7 @@ header p {
 .profile-wrapper {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 .foto {
@@ -43,11 +46,14 @@ header p {
   width: 215px;
   height: 215px;
 
-  background-image: url("./assets/perfil.jpeg");
+  background-image: url('./assets/perfil.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
+  -webkit-box-shadow: 0px 0px 50px 3px rgba(5, 95, 239, 1);
+  -moz-box-shadow: 0px 0px 50px 3px rgba(5, 95, 239, 1);
+  box-shadow: 0px 0px 50px 3px rgba(5, 95, 239, 1);
 }
 
 .redes {
@@ -80,8 +86,7 @@ header p {
   font-size: 2.2rem;
 }
 
-
-
+/*=========================================================== PARTE CONTATO ====================================================================*/
 
 .cv-contato {
   display: flex;
@@ -93,7 +98,7 @@ header p {
 }
 
 .cv-button {
-  background-color: #055fef;
+  background-color: var(--cor-azul);
   color: white;
   text-transform: uppercase;
   font-weight: bold;
@@ -110,6 +115,11 @@ header p {
   justify-content: center;
 }
 
+.cv-button:hover {
+  background-color: var(--cor-cinza);
+  color: var(--cor-azul);
+}
+
 .ct-button {
   background-color: var(--cor-cinza);
   color: white;
@@ -122,11 +132,11 @@ header p {
   height: 70px;
 }
 
+.ct-button:hover {
+  background-color: var(--cor-azul);
+}
 
-
-
-
-
+/*=========================================================== PARTE PROJETOS ====================================================================*/
 
 .projetos {
   background-color: var(--cor-cinza);
@@ -145,19 +155,25 @@ header p {
   gap: 40px;
 }
 
-.projetos h2 {
-  width: 250px;
-  height: 80px;
-  line-height: 80px;
-  border-radius: 10px;
-  font-size: 3rem;
+.projeto-estudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 70px;
 }
 
-.projetos h2:hover {
-  background-color: var(--cor-preto);
+.projeto-estudo span {
+  color: var(--cor-azul);
+  font-size: 1.8rem;
 }
 
-
+.projeto-estudo h1 {
+  font-size: 4.8rem;
+}
 
 .amostra-projetos {
   margin-bottom: 50px;
@@ -167,27 +183,87 @@ header p {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
-.projeto {
-  width: 45%;
-
-  transition: 1s;
-  filter: grayscale(0.8);
+.projeto-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 5rem;
 }
 
-.projeto img {
-  width: 100%;
+/*=== inverter display dos projetos====*/
+.inverter {  
+  flex-direction: row-reverse;
+}
+
+
+.projeto-img {
+  width: 50%;
+}
+
+.projeto-img img {
+  object-fit: cover;
+  border-radius: 10px;
+  height: 40rem;
+  -webkit-box-shadow: 10px 10px 50px -15px rgba(5, 95, 239, 1);
+  -moz-box-shadow: 10px 10px 50px -15px rgba(5, 95, 239, 1);
+  box-shadow: 10px 10px 50px -15px rgba(5, 95, 239, 1);
+}
+
+.projeto-txt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 25px;
+}
+
+.projeto-txt a{
+  text-decoration: none;
+  color: var(--cor-azul);
+}
+
+.projeto-txt span {
+  color: var(--cor-azul);
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.projeto-txt p {
+  font-size: 2.2rem;
+}
+
+.projeto-txt h1 {
+  font-size: 3.4rem;
+}
+
+.ver-projeto {
+  width: 30rem;
+  height: 5rem;
+  font-size: 2.4rem;
+
+  background: none;
+  border: solid 1px var(--cor-azul);
+  color: #fff;
   border-radius: 10px;
 }
 
-.projeto:hover {
-  filter: grayscale(0);
+.ver-projeto:hover {
+  background-color: var(--cor-azul);
 }
 
+.space {
+  display: flex;
+  flex-direction: column;
+}
 
-
+/*=========================================================== PARTE RODAPÉ ====================================================================*/
 
 footer {
   width: 100%;
@@ -198,3 +274,4 @@ footer {
 footer a {
   text-decoration: none;
 }
+
